@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#050910</color>
+    <color name="card_blue">#714DD9</color>
+    <color name="card_green">#13B57A</color>
+    <color name="card_yellow">#F2C94C</color>
+    <color name="light_gray">#a2a2a2</color>
+</resources>
