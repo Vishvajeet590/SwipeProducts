@@ -1,7 +1,6 @@
 package com.vishwajeet.swipeproducts.ui.productList
 
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -10,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.vishwajeet.swipeproducts.R
 import com.vishwajeet.swipeproducts.databinding.ProductListCardBinding
-import com.vishwajeet.swipeproducts.models.ProductListResponseItem
+import com.vishwajeet.swipeproducts.models.ProductItem
 import kotlin.random.Random
 
-class ProductListAdapter() : ListAdapter<ProductListResponseItem, ProductListAdapter.ProductListviewHolder>(ComparatorDiffUtil()) {
+class ProductListAdapter() : ListAdapter<ProductItem, ProductListAdapter.ProductListviewHolder>(ComparatorDiffUtil()) {
 
     inner class ProductListviewHolder(private val binding: ProductListCardBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(product: ProductListResponseItem) {
+        fun bind(product: ProductItem) {
             binding.name.text = product.product_name
             binding.type.text = product.product_type
             binding.tax.text = product.tax.toString()
@@ -38,12 +37,12 @@ class ProductListAdapter() : ListAdapter<ProductListResponseItem, ProductListAda
         }
     }
 
-    class ComparatorDiffUtil : DiffUtil.ItemCallback<ProductListResponseItem>() {
-        override fun areItemsTheSame(oldItem: ProductListResponseItem, newItem: ProductListResponseItem): Boolean {
+    class ComparatorDiffUtil : DiffUtil.ItemCallback<ProductItem>() {
+        override fun areItemsTheSame(oldItem: ProductItem, newItem: ProductItem): Boolean {
             return oldItem.product_name == newItem.product_name
         }
 
-        override fun areContentsTheSame(oldItem: ProductListResponseItem, newItem: ProductListResponseItem): Boolean {
+        override fun areContentsTheSame(oldItem: ProductItem, newItem: ProductItem): Boolean {
             return oldItem == newItem
         }
     }

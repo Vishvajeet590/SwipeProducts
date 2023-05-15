@@ -7,4 +7,5 @@
     <color name="card_green">#13B57A</color>
     <color name="card_yellow">#F2C94C</color>
     <color name="light_gray">#a2a2a2</color>
+    <color name="primary">#111620</color>
 </resources>

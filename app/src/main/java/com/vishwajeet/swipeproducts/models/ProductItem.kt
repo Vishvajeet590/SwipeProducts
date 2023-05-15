@@ -1,6 +1,6 @@
 package com.vishwajeet.swipeproducts.models
 
-data class ProductListResponseItem(
+data class ProductItem(
     val image: String,
     val price: Double,
     val product_name: String,
